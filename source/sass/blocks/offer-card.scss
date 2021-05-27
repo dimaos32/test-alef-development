@@ -60,8 +60,8 @@
 }
 
 .offer-card__properties {
-  position: relative;
   @include reset-list;
+  position: relative;
   display: flex;
   margin-bottom: 16px;
   font-size: 12px;

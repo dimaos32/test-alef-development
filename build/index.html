@@ -37,7 +37,7 @@
       </symbol>
       <symbol id="icon-shevron" viewBox="0 0 15 15">
         <g clip-path="url(#clip0)">
-          <path d="M8.0853 11.6669L14.7604 4.99166C14.9149 4.83727 15 4.63118 15 4.41142C15 4.19167 14.9149 3.98557 14.7604 3.83118L14.2689 3.3396C13.9487 3.01973 13.4282 3.01973 13.1084 3.3396L7.50311 8.94492L1.89157 3.33338C1.73706 3.17899 1.53109 3.09375 1.31146 3.09375C1.09158 3.09375 0.885606 3.17899 0.730973 3.33338L0.239635 3.82496C0.0851249 3.97947 3.76698e-06 4.18545 3.75737e-06 4.4052C3.74777e-06 4.62496 0.0851249 4.83105 0.239635 4.98544L6.9208 11.6669C7.0758 11.8216 7.28275 11.9066 7.50275 11.9061C7.7236 11.9066 7.93042 11.8216 8.0853 11.6669Z" fill="black" />
+          <path d="M8.0853 11.6669L14.7604 4.99166C14.9149 4.83727 15 4.63118 15 4.41142C15 4.19167 14.9149 3.98557 14.7604 3.83118L14.2689 3.3396C13.9487 3.01973 13.4282 3.01973 13.1084 3.3396L7.50311 8.94492L1.89157 3.33338C1.73706 3.17899 1.53109 3.09375 1.31146 3.09375C1.09158 3.09375 0.885606 3.17899 0.730973 3.33338L0.239635 3.82496C0.0851249 3.97947 3.76698e-06 4.18545 3.75737e-06 4.4052C3.74777e-06 4.62496 0.0851249 4.83105 0.239635 4.98544L6.9208 11.6669C7.0758 11.8216 7.28275 11.9066 7.50275 11.9061C7.7236 11.9066 7.93042 11.8216 8.0853 11.6669Z" fill="currentColor" />
         </g>
       </symbol>
     </svg>
@@ -79,13 +79,13 @@
         <div class="container">
           <div class="offer__filter">
             <span class="offer__filter-prompt">Сортировать по:</span>
-            <button class="btn-reset" type="button">
+            <button class="btn-reset offer__filter-btn" type="button">
               <span>Цене</span>
               <svg width="15" height="15">
                 <use xlink:href="#icon-shevron"></use>
               </svg>
             </button>
-            <button class="btn-reset" type="button">
+            <button class="btn-reset offer__filter-btn" type="button">
               <span>Возрасту</span>
               <svg width="15" height="15">
                 <use xlink:href="#icon-shevron"></use>
@@ -131,7 +131,221 @@
                 <button class="btn-reset offer-card__btn">Купить</button>
               </article>
             </li>
+            <li>
+              <article class="offer-card">
+                <div class="offer-card__img">
+                  <picture>
+                    <source srcset="img/content/cat-1.webp 1x, img/content/cat-1@2x.webp 2x">
+                    <!-- 1х: 380px; 2x: 760px -->
+                    <img src="img/content/cat-1.jpg" srcset="img/content/cat-1@2x.jpg 2x" width="380" height="264" alt="Умный котик">
+                  </picture>
+                  <div class="offer-card__discount">-<output>40</output>%</div>
+                  <button class="btn-reset offer-card__like-btn" type="button">
+                    <svg width="46" height="46">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="offer-card__desc">
+                  <h2 class="offer-card__title">Кот полосатый</h2>
+                  <dl class="offer-card__properties">
+                    <div class="offer-card__property">
+                      <dt>окрас</dt>
+                      <dd>Коричневый</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Возраст</dt>
+                      <dd>2 мес.</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Кол-во лап</dt>
+                      <dd>4</dd>
+                    </div>
+                  </dl>
+                  <div class="offer-card__price">
+                    <output>30 000</output> руб.
+                  </div>
+                </div>
+                <button class="btn-reset offer-card__btn">Купить</button>
+              </article>
+            </li>
+            <li>
+              <article class="offer-card">
+                <div class="offer-card__img">
+                  <picture>
+                    <source srcset="img/content/cat-1.webp 1x, img/content/cat-1@2x.webp 2x">
+                    <!-- 1х: 380px; 2x: 760px -->
+                    <img src="img/content/cat-1.jpg" srcset="img/content/cat-1@2x.jpg 2x" width="380" height="264" alt="Умный котик">
+                  </picture>
+                  <div class="offer-card__discount">-<output>40</output>%</div>
+                  <button class="btn-reset offer-card__like-btn" type="button">
+                    <svg width="46" height="46">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="offer-card__desc">
+                  <h2 class="offer-card__title">Кот полосатый</h2>
+                  <dl class="offer-card__properties">
+                    <div class="offer-card__property">
+                      <dt>окрас</dt>
+                      <dd>Коричневый</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Возраст</dt>
+                      <dd>2 мес.</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Кол-во лап</dt>
+                      <dd>4</dd>
+                    </div>
+                  </dl>
+                  <div class="offer-card__price">
+                    <output>30 000</output> руб.
+                  </div>
+                </div>
+                <button class="btn-reset offer-card__btn">Купить</button>
+              </article>
+            </li>
+            <li>
+              <article class="offer-card">
+                <div class="offer-card__img">
+                  <picture>
+                    <source srcset="img/content/cat-1.webp 1x, img/content/cat-1@2x.webp 2x">
+                    <!-- 1х: 380px; 2x: 760px -->
+                    <img src="img/content/cat-1.jpg" srcset="img/content/cat-1@2x.jpg 2x" width="380" height="264" alt="Умный котик">
+                  </picture>
+                  <div class="offer-card__discount">-<output>40</output>%</div>
+                  <button class="btn-reset offer-card__like-btn" type="button">
+                    <svg width="46" height="46">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="offer-card__desc">
+                  <h2 class="offer-card__title">Кот полосатый</h2>
+                  <dl class="offer-card__properties">
+                    <div class="offer-card__property">
+                      <dt>окрас</dt>
+                      <dd>Коричневый</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Возраст</dt>
+                      <dd>2 мес.</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Кол-во лап</dt>
+                      <dd>4</dd>
+                    </div>
+                  </dl>
+                  <div class="offer-card__price">
+                    <output>30 000</output> руб.
+                  </div>
+                </div>
+                <button class="btn-reset offer-card__btn">Купить</button>
+              </article>
+            </li>
+            <li>
+              <article class="offer-card">
+                <div class="offer-card__img">
+                  <picture>
+                    <source srcset="img/content/cat-1.webp 1x, img/content/cat-1@2x.webp 2x">
+                    <!-- 1х: 380px; 2x: 760px -->
+                    <img src="img/content/cat-1.jpg" srcset="img/content/cat-1@2x.jpg 2x" width="380" height="264" alt="Умный котик">
+                  </picture>
+                  <div class="offer-card__discount">-<output>40</output>%</div>
+                  <button class="btn-reset offer-card__like-btn" type="button">
+                    <svg width="46" height="46">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="offer-card__desc">
+                  <h2 class="offer-card__title">Кот полосатый</h2>
+                  <dl class="offer-card__properties">
+                    <div class="offer-card__property">
+                      <dt>окрас</dt>
+                      <dd>Коричневый</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Возраст</dt>
+                      <dd>2 мес.</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Кол-во лап</dt>
+                      <dd>4</dd>
+                    </div>
+                  </dl>
+                  <div class="offer-card__price">
+                    <output>30 000</output> руб.
+                  </div>
+                </div>
+                <button class="btn-reset offer-card__btn">Купить</button>
+              </article>
+            </li>
+            <li>
+              <article class="offer-card">
+                <div class="offer-card__img">
+                  <picture>
+                    <source srcset="img/content/cat-1.webp 1x, img/content/cat-1@2x.webp 2x">
+                    <!-- 1х: 380px; 2x: 760px -->
+                    <img src="img/content/cat-1.jpg" srcset="img/content/cat-1@2x.jpg 2x" width="380" height="264" alt="Умный котик">
+                  </picture>
+                  <div class="offer-card__discount">-<output>40</output>%</div>
+                  <button class="btn-reset offer-card__like-btn" type="button">
+                    <svg width="46" height="46">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="offer-card__desc">
+                  <h2 class="offer-card__title">Кот полосатый</h2>
+                  <dl class="offer-card__properties">
+                    <div class="offer-card__property">
+                      <dt>окрас</dt>
+                      <dd>Коричневый</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Возраст</dt>
+                      <dd>2 мес.</dd>
+                    </div>
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Кол-во лап</dt>
+                      <dd>4</dd>
+                    </div>
+                  </dl>
+                  <div class="offer-card__price">
+                    <output>30 000</output> руб.
+                  </div>
+                </div>
+                <button class="btn-reset offer-card__btn">Купить</button>
+              </article>
+            </li>
           </ul>
+          <button class="btn-reset offer__show-more-btn" type="button">Показать еще 20</button>
+        </div>
+      </section>
+      <section class="subscription">
+        <div class="container subscription__container">
+          <div class="subscription__content">
+            <h2 class="subscription__title">Успей купить!</h2>
+            <p class="subscription__desc">Подпишись и успей словить все акции</p>
+          </div>
+          <div class="subscription__form">
+            <form action="#" method="post">
+              <div class="subscription__form-wrapper">
+                <div class="subscription__email">
+                  <input type="email" name="user-email" id="user-email" required placeholder="Email">
+                  <label for="user-email" class="visually-hidden">ВВедите ваш email</label>
+                </div>
+                <div class="subscription__agreement">
+                  <input class="visually-hidden" type="checkbox" name="user-agreement" id="user-agreement" checked required>
+                  <label for="user-agreement">Подписаться на новости</label>
+                </div>
+                <button class="btn-reset subscription__submit-btn" type="submit">Подписаться</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
       <!-- <div class="container">

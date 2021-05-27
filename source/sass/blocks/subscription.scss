@@ -1,0 +1,170 @@
+.subscription {
+  padding: 90px 80px;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+}
+
+.subscription__container {
+  display: flex;
+}
+
+.subscription__content {
+  flex-shrink: 0;
+  width: 375px;
+  margin-right: 80px;
+}
+
+.subscription__title {
+  margin: 0;
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.23;
+}
+
+.subscription__desc {
+  margin: 0;
+  font-size: 28px;
+  line-height: 0.91;
+}
+
+.subscription__form {
+  flex-grow: 1;
+}
+
+.subscription__form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.subscription__email {
+  flex-grow: 1;
+  margin-right: 16px;
+
+  input {
+    width: 100%;
+    padding: 22px;
+    font-size: 14px;
+    line-height: 1.21;
+    border: 2px solid $color-default-white;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      border-color: $color-seagull;
+    }
+
+    &:active {
+      border-color: $color-steel-blue;
+    }
+  }
+}
+
+.subscription__agreement {
+  margin-top: 24px;
+  order: 2;
+  width: 100%;
+
+  label {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 1.21;
+    transition: color $default-transition-settings;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      color: $color-default-white;
+      background-color: $color-default-white;
+      background-image: none;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 2px solid $color-seagull;
+      border-radius: 3px;
+      transition:
+        background-color $default-transition-settings,
+        border-color $default-transition-settings;
+    }
+  }
+
+  input:checked ~ label {
+    &::before {
+      background-color: $color-seagull;
+      background-image: url("../../img/bg/icon-check-mark.svg");
+    }
+  }
+
+  input:checked ~ label:hover,
+  input:checked:focus ~ label {
+    color: $color-seagull;
+
+    &::before {
+      border-color: $color-default-white;
+    }
+  }
+
+  input:not(:checked) ~ label:hover,
+  input:not(:checked):focus ~ label {
+    color: $color-seagull;
+
+    &::before {
+      background-color: $color-seagull;
+    }
+  }
+
+  input:checked ~ label:active {
+    color: $color-steel-blue;
+
+    &::before {
+      background-color: $color-steel-blue;
+    }
+  }
+
+  input:not(:checked) ~ label:active {
+    color: $color-steel-blue;
+
+    &::before {
+      background-color: $color-steel-blue;
+      border-color: $color-steel-blue;
+    }
+  }
+}
+
+.subscription__submit-btn {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding: 22px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  color: $color-default-white;
+  background-color: $color-seagull;
+  border: 2px solid $color-seagull;
+  border-radius: 10px;
+  outline: none;
+  transition:
+    color $default-transition-settings,
+    background-color $default-transition-settings,
+    border-color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-seagull;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-steel-blue;
+    border-color: $color-steel-blue;
+  }
+}

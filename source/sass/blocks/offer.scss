@@ -1,0 +1,50 @@
+.offer {
+  margin-bottom: 85px;
+}
+
+.offer__filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.offer__filter-prompt {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+.offer__filter-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  font-size: 18px;
+  line-height: 1.22;
+
+  svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+  }
+}
+
+.offer__cards {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -10px;
+  margin-bottom: 60px;
+}
+
+.offer__show-more-btn {
+  display: block;
+  min-width: 380px;
+  margin: 0 auto;
+  padding: 23px;
+  font-size: 14px;
+  line-height: 1.21;
+  border: 1px solid $color-very-light-grey;
+  border-radius: 10px;
+}
