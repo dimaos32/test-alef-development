@@ -1,0 +1,73 @@
+.header {
+  padding: 40px 0 65px;
+  color: $color-default-white;
+  background-color: $color-default-black;
+  background-image: url("../img/bg/bg-header.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/bg/bg-header@2x.jpg");
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 50px;
+}
+
+.header__logo {
+  display: block;
+
+  img {
+    width: 78px;
+    height: 52px;
+  }
+}
+
+.main-nav__list {
+  @include reset-list;
+  display: flex;
+  margin: 0 90px;
+}
+
+.main-mav__item {
+  padding: 0 30px;
+}
+
+.main-mnav__link {
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 1.22;
+  color: $color-default-white;
+}
+
+.header__phone-wrapper {
+  margin-left: auto;
+  margin-bottom: -25px;
+}
+
+.header__phone {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.21;
+  color: $color-default-white;
+}
+
+.header__phone-hint {
+  margin: 0;
+  margin-top: 3px;
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+.header__result-message {
+  margin: 0 10px;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.21;
+}
