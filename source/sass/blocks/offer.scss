@@ -15,17 +15,44 @@
 }
 
 .offer__filter-btn {
-  display: flex;
-  align-items: center;
+  position: relative;
   margin-left: 50px;
+  padding-right: 30px;
   font-size: 18px;
   line-height: 1.22;
+  outline: none;
+  transition: color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-seagull;
+  }
+
+  &:active {
+    color: $color-steel-blue;
+  }
 
   svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) scaleY(0);
     display: block;
     width: 15px;
     height: 15px;
     margin-left: 15px;
+  }
+
+  &[data-is-sorted="true"] {
+    svg {
+      transform: translateY(-50%) scaleY(1);
+    }
+  }
+
+  &[data-is-direct-sort="true"] {
+    svg {
+      transform: translateY(-50%) scaleY(-1);
+    }
   }
 }
 
@@ -47,4 +74,20 @@
   line-height: 1.21;
   border: 1px solid $color-very-light-grey;
   border-radius: 10px;
+  outline: none;
+  transition:
+    color $default-transition-settings,
+    background-color $default-transition-settings,
+    border-color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+    background-color: $color-very-light-grey;
+  }
+
+  &:active {
+    background-color: $color-steel-blue;
+    border-color: $color-steel-blue;
+  }
 }

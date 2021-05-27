@@ -35,9 +35,20 @@
   top: 34px;
   right: 32px;
   color: rgba($color-default-white, 0.5);
+  outline: none;
+  transition: color $default-transition-settings;
 
   &--is-liked {
     color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-steel-blue;
+  }
+
+  &:active {
+    color: $color-seagull;
   }
 
   svg {
@@ -115,4 +126,20 @@
   text-align: center;
   color: $color-default-white;
   background-color: $color-seagull;
+  outline: none;
+  transition: background-color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    background-color: $color-steel-blue;
+  }
+
+  &:active {
+    background-color: $color-very-light-grey;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $color-black-pearl;
+  }
 }

@@ -44,6 +44,17 @@
   font-size: 18px;
   line-height: 1.22;
   color: $color-default-white;
+  outline: none;
+  transition: color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-seagull;
+  }
+
+  &:active {
+    color: $color-steel-blue;
+  }
 }
 
 .header__phone-wrapper {
@@ -57,6 +68,17 @@
   font-size: 24px;
   line-height: 1.21;
   color: $color-default-white;
+  outline: none;
+  transition: color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-seagull;
+  }
+
+  &:active {
+    color: $color-steel-blue;
+  }
 }
 
 .header__phone-hint {
