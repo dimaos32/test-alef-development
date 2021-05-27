@@ -18,15 +18,84 @@
     })
 
     <main>
-      <div class="container">
+      <h1 class="visually-hidden">Самые милые котики на свете!</h1>
+      <section class="offer">
+        <div class="container">
+          <div class="offer__filter">
+            <span class="offer__filter-prompt">Сортировать по:</span>
+
+            <button class="btn-reset" type="button">
+              <span>Цене</span>
+              <svg width="15" height="15">
+                <use xlink:href="#icon-shevron"></use>
+              </svg>
+            </button>
+
+            <button class="btn-reset" type="button">
+              <span>Возрасту</span>
+              <svg width="15" height="15">
+                <use xlink:href="#icon-shevron"></use>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="offer__cards">
+            <li>
+              <article class="offer-card">
+                <div class="offer-card__img">
+                  <picture>
+                    <source srcset="img/content/cat-1.webp 1x, img/content/cat-1@2x.webp 2x">
+                    <!-- 1х: 380px; 2x: 760px -->
+                    <img src="img/content/cat-1.jpg" srcset="img/content/cat-1@2x.jpg 2x" width="380" height="264" alt="Умный котик">
+                  </picture>
+
+                  <div class="offer-card__discount">-<output>40</output>%</div>
+
+                  <button class="btn-reset offer-card__like-btn" type="button">
+                    <svg width="46" height="46">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="offer-card__desc">
+                  <h2 class="offer-card__title">Кот полосатый</h2>
+
+                  <dl class="offer-card__properties">
+                    <div class="offer-card__property">
+                      <dt>окрас</dt>
+                      <dd>Коричневый</dd>
+                    </div>
+
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Возраст</dt>
+                      <dd>2 мес.</dd>
+                    </div>
+
+                    <div class="offer-card__property offer-card__property--numeric">
+                      <dt>Кол-во лап</dt>
+                      <dd>4</dd>
+                    </div>
+                  </dl>
+
+                  <div class="offer-card__price">
+                    <output>30 000</output> руб.
+                  </div>
+                </div>
+
+                <button class="btn-reset offer-card__btn">Купить</button>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- <div class="container">
         <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
         <p><a href="#" data-modal="success">modal--success link</a></p>
-      </div>
+      </div> -->
     </main>
 
-    @@include("source/html/base/footer.html")
-
-    @@include("source/html/base/modal.html", {
+    <!-- @@include("source/html/base/modal.html", {
       "name": "feedback"
     })
 
@@ -35,7 +104,7 @@
       "fitContent": true,
       "noScale": true,
       "mod": "some-mod"
-    })
+    }) -->
   </div>
 
   <script src="js/vendor.min.js"></script>

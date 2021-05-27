@@ -1,0 +1,118 @@
+.offer-card {
+  width: 380px;
+  margin: 10px;
+  background-color: $color-white-smoke;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.offer-card__img {
+  position: relative;
+
+  img {
+    width: 380px;
+    height: 264px;
+    object-fit: cover;
+  }
+}
+
+.offer-card__discount {
+  position: absolute;
+  top: 34px;
+  left: 38px;
+  min-width: 80px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: $color-default-white;
+  background-color: $color-cinnabar;
+  border-radius: 10px;
+}
+
+.offer-card__like-btn {
+  position: absolute;
+  top: 34px;
+  right: 32px;
+  color: rgba($color-default-white, 0.5);
+
+  &--is-liked {
+    color: $color-default-white;
+  }
+
+  svg {
+    display: block;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.offer-card__desc {
+  padding: 30px;
+}
+
+.offer-card__title {
+  margin: 0;
+  margin-bottom: 22px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.21;
+}
+
+.offer-card__properties {
+  position: relative;
+  @include reset-list;
+  display: flex;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.25;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: -2px;
+    width: 4px;
+    height: 26px;
+    background-color: $color-seagull;
+  }
+}
+
+.offer-card__property {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  margin-left: 20px;
+  width: 90px;
+
+  dd {
+    margin: 0;
+  }
+
+  &--numeric {
+    width: 80px;
+
+    dd {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+}
+
+.offer-card__price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.21;
+}
+
+.offer-card__btn {
+  width: 100%;
+  padding: 22px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: $color-default-white;
+  background-color: $color-seagull;
+}
