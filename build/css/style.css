@@ -808,11 +808,11 @@ button,
   margin: 0 90px;
 }
 
-.main-mav__item {
+.main-nav__item {
   padding: 0 30px;
 }
 
-.main-mnav__link {
+.main-nav__link {
   display: block;
   padding: 10px 0;
   font-size: 18px;
@@ -823,12 +823,12 @@ button,
   transition: color 0.3s ease;
 }
 
-.main-mnav__link:hover,
-.main-mnav__link:focus {
+.main-nav__link:hover,
+.main-nav__link:focus {
   color: #6ebbd3;
 }
 
-.main-mnav__link:active {
+.main-nav__link:active {
   color: #4682b4;
 }
 
@@ -1448,11 +1448,11 @@ button,
     margin: 0 -20px;
   }
 
-  .main-mav__item {
+  .main-nav__item {
     padding: 0 20px;
   }
 
-  .main-mav__item:first-of-type {
+  .main-nav__item:first-of-type {
     margin-left: auto;
   }
 
@@ -1614,19 +1614,19 @@ button,
     transition: visibility 0s ease 0s, transform 0.3s ease, -webkit-transform 0.3s ease;
   }
 
-  .main-mav__item {
+  .main-nav__item {
     padding: 10px 0;
   }
 
-  .main-mav__item:first-of-type {
+  .main-nav__item:first-of-type {
     margin-left: 0;
   }
 
-  .main-mav__item:not(:last-of-type) {
+  .main-nav__item:not(:last-of-type) {
     border-bottom: 1px solid #ffffff;
   }
 
-  .main-mnav__link {
+  .main-nav__link {
     width: 100%;
     padding: 10px;
   }
