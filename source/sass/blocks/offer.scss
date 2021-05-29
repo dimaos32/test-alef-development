@@ -1,11 +1,19 @@
 .offer {
   margin-bottom: 85px;
+
+  @include viewport--md {
+    margin-bottom: 50px;
+  }
 }
 
 .offer__filter {
   display: flex;
   align-items: center;
   margin-bottom: 38px;
+
+  @include viewport--md {
+    margin-bottom: 25px;
+  }
 }
 
 .offer__filter-prompt {
@@ -64,6 +72,12 @@
   justify-content: center;
   margin: -10px;
   margin-bottom: 60px;
+
+  @include viewport--md {
+    display: block;
+    margin: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .offer__show-more-btn {

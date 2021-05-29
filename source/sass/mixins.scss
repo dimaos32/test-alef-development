@@ -6,12 +6,6 @@
 
 // Desktop first
 
-@mixin viewport--xl {
-  @media (max-width: $viewport--xxl - 1) {
-    @content;
-  }
-}
-
 @mixin viewport--lg {
   @media (max-width: $viewport--xl - 1) {
     @content;

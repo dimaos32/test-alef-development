@@ -4,15 +4,34 @@
   background-color: $color-white-smoke;
   border-radius: 0 0 10px 10px;
   overflow: hidden;
+
+  @include viewport--md {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+
+    li:nth-of-type(2n) & {
+      flex-direction: row-reverse;
+    }
+  }
 }
 
 .offer-card__img {
   position: relative;
+  flex-shrink: 0;
 
   img {
     width: 380px;
     height: 264px;
     object-fit: cover;
+  }
+
+  @include viewport--md {
+    img {
+      width: 300px;
+      height: 100%;
+    }
   }
 }
 
@@ -58,8 +77,19 @@
   }
 }
 
+.offer-card__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .offer-card__desc {
   padding: 30px;
+
+  @include viewport--md {
+    width: fit-content;
+    padding: 30px 20px;
+  }
 }
 
 .offer-card__title {
@@ -109,12 +139,37 @@
       line-height: 1.25;
     }
   }
+
+  @include viewport--md {
+    margin-left: 15px;
+  }
+}
+
+.offer-card__buy-actions {
+  @include viewport--md {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+
+    li:nth-of-type(2n) & {
+      flex-direction: row-reverse;
+    }
+  }
 }
 
 .offer-card__price {
+  padding: 30px;
+  padding-top: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.21;
+
+  @include viewport--md {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0 20px 10px;
+    text-align: center;
+  }
 }
 
 .offer-card__btn {
@@ -141,5 +196,9 @@
   &:disabled {
     cursor: default;
     background-color: $color-black-pearl;
+  }
+
+  @include viewport--md {
+    max-width: 50%;
   }
 }

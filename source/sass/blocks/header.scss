@@ -11,15 +11,27 @@
   @include retina {
     background-image: url("../img/bg/bg-header@2x.jpg");
   }
+
+  @include viewport--md {
+    margin-bottom: 25px;
+    padding: 25px 0 35px;
+  }
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
   margin: 0 10px 50px;
+
+  @include viewport--md {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
 }
 
 .header__logo {
+  flex-shrink: 0;
   display: block;
 
   img {
@@ -28,36 +40,8 @@
   }
 }
 
-.main-nav__list {
-  @include reset-list;
-  display: flex;
-  margin: 0 90px;
-}
-
-.main-mav__item {
-  padding: 0 30px;
-}
-
-.main-mnav__link {
-  display: block;
-  padding: 10px 0;
-  font-size: 18px;
-  line-height: 1.22;
-  color: $color-default-white;
-  outline: none;
-  transition: color $default-transition-settings;
-
-  &:hover,
-  &:focus {
-    color: $color-seagull;
-  }
-
-  &:active {
-    color: $color-steel-blue;
-  }
-}
-
 .header__phone-wrapper {
+  flex-shrink: 0;
   margin-left: auto;
   margin-bottom: -25px;
 }
@@ -93,4 +77,8 @@
   font-weight: 700;
   font-size: 38px;
   line-height: 1.21;
+
+  @include viewport--md {
+    text-align: right;
+  }
 }

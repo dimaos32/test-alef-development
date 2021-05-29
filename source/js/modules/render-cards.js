@@ -14,39 +14,43 @@ const createCard = (data) => {
   const element = document.createElement('li');
 
   element.innerHTML = `<article class="offer-card" data-id="${id}">
-  <div class="offer-card__img">
-    <picture>
-      <source srcset="img/content/${img.name}.webp 1x, img/content/${img.name}@2x.webp 2x">
-      <!-- 1х: 380px; 2x: 760px -->
-      <img src="img/content/${img.name}.${img.format}" srcset="img/content/${img.name}@2x.${img.format} 2x" width="380" height="264" alt="${img.alt}">
-    </picture>
-    <button class="btn-reset offer-card__like-btn" type="button">
-      <svg width="46" height="46">
-        <use xlink:href="#icon-heart"></use>
-      </svg>
-    </button>
+    <div class="offer-card__img">
+      <picture>
+        <source srcset="img/content/${img.name}.webp 1x, img/content/${img.name}@2x.webp 2x">
+        <!-- 1х: 380px; 2x: 760px -->
+        <img src="img/content/${img.name}.${img.format}" srcset="img/content/${img.name}@2x.${img.format} 2x" width="380" height="264" alt="${img.alt}">
+      </picture>
+      <button class="btn-reset offer-card__like-btn" type="button">
+        <svg width="46" height="46">
+          <use xlink:href="#icon-heart"></use>
+        </svg>
+      </button>
     </div>
-    <div class="offer-card__desc">
-      <h2 class="offer-card__title">${name}</h2>
-      <dl class="offer-card__properties">
-        <div class="offer-card__property">
-          <dt>окрас</dt>
-          <dd>${color}</dd>
-        </div>
-        <div class="offer-card__property offer-card__property--numeric">
-          <dt>Возраст</dt>
-          <dd>${age} мес.</dd>
-        </div>
-        <div class="offer-card__property offer-card__property--numeric">
-          <dt>Кол-во лап</dt>
-          <dd>${paws}</dd>
-        </div>
-      </dl>
-      <div class="offer-card__price">
-        <output>${formatPrice(price)}</output> руб.
+    <div class="offer-card__content">
+      <div class="offer-card__desc">
+        <h2 class="offer-card__title">${name}</h2>
+        <dl class="offer-card__properties">
+          <div class="offer-card__property">
+            <dt>окрас</dt>
+            <dd>${color}</dd>
+          </div>
+          <div class="offer-card__property offer-card__property--numeric">
+            <dt>Возраст</dt>
+            <dd>${age} мес.</dd>
+          </div>
+          <div class="offer-card__property offer-card__property--numeric">
+            <dt>Кол-во лап</dt>
+            <dd>${paws}</dd>
+          </div>
+        </dl>
       </div>
+      <div class="offer-card__buy-actions">
+        <div class="offer-card__price">
+          <output>${formatPrice(price)}</output> руб.
+        </div>
+        <button class="btn-reset offer-card__btn">Купить</button>
+      <div>
     </div>
-    <button class="btn-reset offer-card__btn">Купить</button>
   </article>`;
 
   if (discount) {
