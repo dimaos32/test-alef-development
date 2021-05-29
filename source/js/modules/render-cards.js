@@ -10,10 +10,10 @@ const formatPrice = (num) => {
 };
 
 const createCard = (data) => {
-  const {name, color, age, paws, price, isLiked, isSoldOut, discount, img} = data;
+  const {id, name, color, age, paws, price, isLiked, isSoldOut, discount, img} = data;
   const element = document.createElement('li');
 
-  element.innerHTML = `<article class="offer-card">
+  element.innerHTML = `<article class="offer-card" data-id="${id}">
   <div class="offer-card__img">
     <picture>
       <source srcset="img/content/${img.name}.webp 1x, img/content/${img.name}@2x.webp 2x">
@@ -82,6 +82,21 @@ const renderCats = (data) => {
   });
 };
 
+const onLikeBtnClick = ({target}) => {
+  const card = target.closest('.offer-card');
+  const btn = target.closest('.offer-card__like-btn');
+
+  if (btn) {
+    const currentCat = cats.find((cat) => cat.id === card.dataset.id);
+    btn.classList.toggle('offer-card__like-btn--is-liked');
+    btn.blur();
+
+
+    currentCat.isLiked = !currentCat.isLiked;
+
+  }
+};
+
 const onFilterClick = ({target}) => {
   const btn = target.closest('.offer__filter-btn');
 
@@ -116,6 +131,8 @@ const renderCards = () => {
   }
 
   renderCats(cats);
+
+  list.addEventListener('click', onLikeBtnClick);
 
   if (filter) {
     filter.addEventListener('click', onFilterClick);

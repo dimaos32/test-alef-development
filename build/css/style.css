@@ -882,6 +882,8 @@ button,
   width: 15px;
   height: 15px;
   margin-left: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .offer__filter-btn[data-is-sorted="true"] svg {
