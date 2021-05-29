@@ -6,6 +6,10 @@
   @include viewport--md {
     padding: 50px 0;
   }
+
+  @include viewport--sm {
+    padding: 20px 0;
+  }
 }
 
 .subscription__container {
@@ -19,6 +23,11 @@
   @include viewport--md {
     padding: 0 40px;
   }
+
+  @include viewport--sm {
+    padding: 0 24px;
+    display: block;
+  }
 }
 
 .subscription__content {
@@ -29,6 +38,12 @@
   @include viewport--lg {
     margin-right: 40px;
   }
+
+  @include viewport--sm {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .subscription__title {
@@ -37,12 +52,20 @@
   font-weight: 700;
   font-size: 48px;
   line-height: 1.23;
+
+  @include viewport--sm {
+    text-align: center;
+  }
 }
 
 .subscription__desc {
   margin: 0;
   font-size: 28px;
   line-height: 0.91;
+
+  @include viewport--sm {
+    text-align: center;
+  }
 }
 
 .subscription__form {
@@ -51,6 +74,10 @@
   @include viewport--lg {
     max-width: 400px;
     margin-left: auto;
+  }
+
+  @include viewport--sm {
+    max-width: unset;
   }
 }
 

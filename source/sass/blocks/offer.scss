@@ -4,6 +4,10 @@
   @include viewport--md {
     margin-bottom: 50px;
   }
+
+  @include viewport--sm {
+    margin-bottom: 20px;
+  }
 }
 
 .offer__filter {
@@ -78,6 +82,10 @@
     margin: 0;
     margin-bottom: 30px;
   }
+
+  @include viewport--sm {
+    margin-bottom: 20px;
+  }
 }
 
 .offer__show-more-btn {
@@ -104,5 +112,10 @@
   &:active {
     background-color: $color-steel-blue;
     border-color: $color-steel-blue;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    min-width: unset;
   }
 }

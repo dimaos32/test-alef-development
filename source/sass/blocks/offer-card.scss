@@ -15,6 +15,10 @@
       flex-direction: row-reverse;
     }
   }
+
+  @include viewport--sm {
+    display: block;
+  }
 }
 
 .offer-card__img {
@@ -31,6 +35,13 @@
     img {
       width: 300px;
       height: 100%;
+    }
+  }
+
+  @include viewport--sm {
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
@@ -85,10 +96,16 @@
 
 .offer-card__desc {
   padding: 30px;
+  padding-bottom: 16px;
 
   @include viewport--md {
     width: fit-content;
     padding: 30px 20px;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    padding: 16px 10px;
   }
 }
 
@@ -98,6 +115,10 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.21;
+
+  @include viewport--sm {
+    text-align: center;
+  }
 }
 
 .offer-card__properties {
@@ -116,6 +137,15 @@
     width: 4px;
     height: 26px;
     background-color: $color-seagull;
+  }
+
+  @include viewport--sm {
+    width: fit-content;
+    margin: 0 auto;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -143,6 +173,14 @@
   @include viewport--md {
     margin-left: 15px;
   }
+
+  @include viewport--sm {
+    margin-left: 10px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
 }
 
 .offer-card__buy-actions {
@@ -154,6 +192,10 @@
     li:nth-of-type(2n) & {
       flex-direction: row-reverse;
     }
+  }
+
+  @include viewport--sm {
+    display: block;
   }
 }
 
@@ -169,6 +211,10 @@
     flex-shrink: 0;
     padding: 0 20px 10px;
     text-align: center;
+  }
+
+  @include viewport--sm {
+    padding-bottom: 20px;
   }
 }
 
@@ -200,5 +246,9 @@
 
   @include viewport--md {
     max-width: 50%;
+  }
+
+  @include viewport--sm {
+    max-width: unset;
   }
 }
