@@ -416,6 +416,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1055,6 +1056,29 @@ button,
   object-fit: cover;
 }
 
+.offer-card__note {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(110, 187, 211, 0.5);
+  -webkit-transition: visibility 0s ease 0.4s, opacity 0.3s ease;
+  transition: visibility 0s ease 0.4s, opacity 0.3s ease;
+}
+
+.offer-card__note--shown {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s ease 0s, opacity 0.3s ease;
+  transition: visibility 0s ease 0s, opacity 0.3s ease;
+}
+
 .offer-card__discount {
   position: absolute;
   top: 34px;
@@ -1393,6 +1417,44 @@ button,
   border-color: #4682b4;
 }
 
+.scroll-upp-btn {
+  position: fixed;
+  display: none;
+  right: 60px;
+  bottom: 100px;
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  background-color: #6ebbd3;
+  outline: none;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-upp-btn svg {
+  display: block;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.scroll-upp-btn:hover,
+.scroll-upp-btn:focus {
+  background-color: #4682b4;
+}
+
+.scroll-upp-btn:active {
+  background-color: rgba(70, 130, 180, 0.8);
+}
+
+.scroll-upp-btn--shown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1575,6 +1637,11 @@ button,
 
   .subscription__container {
     padding: 0 40px;
+  }
+
+  .scroll-upp-btn {
+    right: 40px;
+    bottom: 40px;
   }
 }
 
@@ -1762,6 +1829,13 @@ button,
 
   .subscription__form {
     max-width: unset;
+  }
+
+  .scroll-upp-btn {
+    right: 20px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
   }
 }
 

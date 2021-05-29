@@ -46,6 +46,31 @@
   }
 }
 
+.offer-card__note {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+  color: $color-default-white;
+  background-color: rgba($color-seagull, 0.5);
+  transition:
+    visibility 0s ease 0.4s,
+    opacity $default-transition-settings;
+
+  &--shown {
+    visibility: visible;
+    opacity: 1;
+    transition:
+      visibility 0s ease 0s,
+      opacity $default-transition-settings;
+  }
+}
+
 .offer-card__discount {
   position: absolute;
   top: 34px;

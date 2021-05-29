@@ -49,6 +49,6 @@ const initMobileMenu = () => {
   };
 
   btn.addEventListener('click', toggleMenu);
-}
+};
 
 export {initMobileMenu};

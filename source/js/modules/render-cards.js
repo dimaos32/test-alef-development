@@ -1,5 +1,7 @@
 import cats from './data-cats';
 
+const NOTE_TIMEOUT = 3000; // ms
+
 const list = document.querySelector('.offer__cards');
 const filter = document.querySelector('.offer__filter');
 
@@ -20,6 +22,7 @@ const createCard = (data) => {
         <!-- 1х: 380px; 2x: 760px -->
         <img src="img/content/${img.name}.${img.format}" srcset="img/content/${img.name}@2x.${img.format} 2x" width="380" height="264" alt="${img.alt}">
       </picture>
+      <div class="offer-card__note">Котик добавлен в избранное</div>
       <button class="btn-reset offer-card__like-btn" type="button">
         <svg width="46" height="46">
           <use xlink:href="#icon-heart"></use>
@@ -92,12 +95,20 @@ const onLikeBtnClick = ({target}) => {
 
   if (btn) {
     const currentCat = cats.find((cat) => cat.id === card.dataset.id);
+    const note = card.querySelector('.offer-card__note');
+
     btn.classList.toggle('offer-card__like-btn--is-liked');
     btn.blur();
 
-
     currentCat.isLiked = !currentCat.isLiked;
 
+    if (currentCat.isLiked) {
+      note.classList.add('offer-card__note--shown');
+
+      setTimeout(() => {
+        note.classList.remove('offer-card__note--shown');
+      }, NOTE_TIMEOUT);
+    }
   }
 };
 
