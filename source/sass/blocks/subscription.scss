@@ -160,7 +160,7 @@
   input:checked ~ label {
     &::before {
       background-color: $color-seagull;
-      background-image: url("../../img/bg/icon-check-mark.svg");
+      background-image: url("../img/bg/icon-check-mark.svg");
     }
   }
 
