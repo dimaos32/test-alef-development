@@ -1251,7 +1251,7 @@ button,
 
 .subscription__agreement input:checked ~ label::before {
   background-color: #6ebbd3;
-  background-image: url("../../img/bg/icon-check-mark.svg");
+  background-image: url("../img/bg/icon-check-mark.svg");
 }
 
 .subscription__agreement input:checked ~ label:hover,
